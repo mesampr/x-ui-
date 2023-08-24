@@ -29,7 +29,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v2
         with:
-          go-version: 1.18
+          go-version: 1.20
       - name: build linux amd64 version
         run: |
           CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -o xui-release -v main.go
@@ -41,7 +41,7 @@ jobs:
           mv xui-release x-ui
           mkdir bin
           cd bin
-          wget https://github.com/hossinasaadi/Xray-core/releases/latest/download/Xray-linux-64.zip
+          wget https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip
           unzip Xray-linux-64.zip
           rm -f Xray-linux-64.zip geoip.dat geosite.dat
           wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat
@@ -69,7 +69,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v2
         with:
-          go-version: 1.18
+          go-version: 1.20
       - name: build linux arm64 version
         run: |
           sudo apt-get update
@@ -83,7 +83,7 @@ jobs:
           mv xui-release x-ui
           mkdir bin
           cd bin
-          wget https://github.com/hossinasaadi/Xray-core/releases/latest/download/Xray-linux-arm64-v8a.zip
+          wget https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-arm64-v8a.zip
           unzip Xray-linux-arm64-v8a.zip
           rm -f Xray-linux-arm64-v8a.zip geoip.dat geosite.dat
           wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat
@@ -111,7 +111,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v2
         with:
-          go-version: 1.18
+          go-version: 1.20
       - name: build linux s390x version
         run: |
           sudo apt-get update
