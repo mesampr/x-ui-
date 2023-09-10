@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Create Release
         id: create_release
-        uses: actions/create-release@v3.5.0
+        uses: actions/create-release@v3
         env:
           GITHUB_TOKEN: ${{ secrets.GAYHUB_TOKEN }}
         with:
@@ -52,7 +52,7 @@ jobs:
       - name: package
         run: tar -zcvf x-ui-linux-amd64.tar.gz x-ui
       - name: upload
-        uses: actions/upload-release-asset@v3.5.0
+        uses: actions/upload-release-asset@v3
         env:
           GITHUB_TOKEN: ${{ secrets.GAYHUB_TOKEN }}
         with:
@@ -94,7 +94,7 @@ jobs:
       - name: package
         run: tar -zcvf x-ui-linux-arm64.tar.gz x-ui
       - name: upload
-        uses: actions/upload-release-asset@v3.5.0
+        uses: actions/upload-release-asset@v3
         env:
           GITHUB_TOKEN: ${{ secrets.GAYHUB_TOKEN }}
         with:
@@ -136,7 +136,7 @@ jobs:
       - name: package
         run: tar -zcvf x-ui-linux-s390x.tar.gz x-ui
       - name: upload
-        uses: actions/upload-release-asset@v3.5.0
+        uses: actions/upload-release-asset@v3
         env:
           GITHUB_TOKEN: ${{ secrets.GAYHUB_TOKEN }}
         with:
